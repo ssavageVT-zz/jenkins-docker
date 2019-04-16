@@ -1,6 +1,8 @@
 FROM openjdk:8-jdk
 
-RUN apt-get update && apt-get install -y git curl maven python3-setuptools python3-pip python3.5-dev python3-boto3 && rm -rf /var/lib/apt/lists/*
+#RUN apt-get update && apt-get install -y git curl maven python3-setuptools python3-pip python3.5-dev python3-boto3 && rm -rf /var/lib/apt/lists/*
+RUN apt-get install -y git curl maven python3-setuptools python3-pip python3.5-dev python3-boto3 && rm -rf /var/lib/apt/lists/*
+
 
 RUN easy_install3 pip
 RUN pip3 install awscli
